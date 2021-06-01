@@ -6,11 +6,13 @@ public  class snakeNLadder {
 	
 	Random random = new Random();
 	int playerPosition = 0;
+	int WIN_POINT=100;
 	
 	public int rollDie() {
 		return random.nextInt(6)+1;
 	}
 	public int calculatePlayerPosition(int player, int diceValue) {
+		if(player < WIN_POINT) {
 		int checkPlay;
 		checkPlay = random.nextInt(3);
 		switch(checkPlay) {
@@ -25,7 +27,10 @@ public  class snakeNLadder {
 			System.out.println("snake");
 			player = player - diceValue;
 			break;
-		
+		}
+			if(player < 0) {
+				player = 0;
+			}
 		}
 		return player;
 	}

@@ -5,7 +5,7 @@ import java.util.Random;
 public  class snakeNLadder {
 	
 	Random random = new Random();
-	int playerPosition = 0;
+	int player = 0;
 	int WIN_POINT=100;
 	
 	public int rollDie() {

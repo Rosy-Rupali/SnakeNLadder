@@ -32,6 +32,9 @@ public  class snakeNLadder {
 				player = 0;
 			}
 		}
+		else {
+			player = player - diceValue;
+		}
 		return player;
 	}
 }
